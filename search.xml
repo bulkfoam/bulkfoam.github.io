@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>为什么要重写equals和hashcode方法？</title>
+    <url>/2020/09/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%87%8D%E5%86%99equals%E5%92%8Chashcode%E6%96%B9%E6%B3%95%EF%BC%9F/</url>
+    <content><![CDATA[<h4 id="Object的equals方法"><a href="#Object的equals方法" class="headerlink" title="Object的equals方法"></a>Object的equals方法</h4><pre><code>public boolean equals(Object obj) &#123;
+    return (this == obj);
+&#125;</code></pre>
+<h4 id="equals-与‘-’的区别"><a href="#equals-与‘-’的区别" class="headerlink" title="equals()与‘==’的区别"></a>equals()与‘==’的区别</h4><p>1.‘==’比较对象的地址<br>2.equals()比较的是对象的内容<br>3.如果不对equals()进行重新，实际还是进行对象地址的比较</p>
+<h3 id="equals-的重写规则"><a href="#equals-的重写规则" class="headerlink" title="equals()的重写规则"></a>equals()的重写规则</h3><ul>
+<li>自反性：对于任何非null的引用值x，x.equals(x)应返回true。</li>
+<li>对称性：对于任何非null的引用值x与y，当且仅当：y.equals(x)返回true时，x.equals(y)才返回true。</li>
+<li>传递性：对于任何非null的引用值x、y与z，如果y.equals(x)返回true，y.equals(z)返回true，那么x.equals(z)也应返回true。</li>
+<li>一致性：对于任何非null的引用值x与y，假设对象上equals比较中的信息没有被修改，则多次调用x.equals(y)始终返回true或者始终返回false。</li>
+<li>对于任何非空引用值x，x.equal(null)应返回false。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+</search>
